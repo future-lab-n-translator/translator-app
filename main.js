@@ -5,12 +5,17 @@ import {
   Text,
   View,
 } from 'react-native';
+import LanguageSelectorContainer from './app/containers/LanguageSelectorContainer';
+import CaptionsContainer from './app/containers/CaptionsContainer';
+import StatusAreaContainer from './app/containers/StatusAreaContainer';
 
-class App extends React.Component {
+class Main extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up main.js to start working on your app!</Text>
+        <LanguageSelectorContainer/>
+        <StatusAreaContainer/>
+        <CaptionsContainer/>
       </View>
     );
   }
@@ -18,11 +23,9 @@ class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
   },
 });
 
-Exponent.registerRootComponent(App);
+Exponent.registerRootComponent(Main);
